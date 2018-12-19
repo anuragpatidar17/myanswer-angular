@@ -1,0 +1,22 @@
+<div class="container">
+  
+    
+      <div class="form-group">
+          <label for="sel1">Select list:</label>
+    <select class="form-control"  id="sel1" placeholder="Select Exam" [(ngModel)]="uid">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+        <label for="comment">questions:</label>
+        <textarea class="form-control"  rows="5" id="comment"placeholder="Your Question" [(ngModel)]="question"></textarea><br>
+  
+        <label for="comment">answers:</label>
+         <textarea class="form-control"  rows="5" id="comment"placeholder="Your answer" [(ngModel)]="answer"></textarea><br>
+  
+         <input type="submit" class="btn btn-info" (click)="submit()" value="Submit Button">
+        
+      </div>
+    
+  </div>

@@ -1,0 +1,11 @@
+<h1>Signup Form</h1>
+<div class="log">
+    <input type="text" class="input" placeholder="Your Name" [(ngModel)]="name"/><br>
+<input type="email" class="input" placeholder="Your E-Mail" [(ngModel)]="email"/><br>
+<select [(ngModel)]="department"><option value="CSE">CSe</option>
+                                <option value="IT">IT</option>
+                                  <option value="ME">ME</option></select>
+<input type="password" class="input" placeholder="Your password" [(ngModel)]="password"/><br>
+</div>
+  
+<button type="button" class="button" (click)="submit()">Submit</button>

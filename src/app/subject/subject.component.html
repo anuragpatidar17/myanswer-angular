@@ -1,0 +1,9 @@
+
+
+
+  <div class="md-form">
+      <input type="search" [(ngModel)]="searchText" placeholder="Search text">
+    </div>
+    <ul *ngFor="let data of dataset | filter: searchText">
+      <li>{{data}} || <a routerLink="/upload" routerLinkActive="active">Upload</a> || <a routerLink="/update" routerLinkActive="active">Previous</a> </li>
+    </ul>
