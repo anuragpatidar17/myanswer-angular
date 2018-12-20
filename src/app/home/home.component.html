@@ -1,8 +1,14 @@
+<div *ngIf="show" class="detail">
+    <h5>User: </h5><span>{{name}}</span>
+    <h5>Department: </h5><span>{{department}}</span>
+    <h5>Email: </h5><span>{{email}}</span>
+    <button (click)="change()">Hide Profile</button>
+    </div>
+<div align="center" style="margin-top:20%">
+<button routerLink="/subject" routerLinkActive="active">Select Subject / UPLOAD</button><br><br>
+<button routerLink="/update" routerLinkActive="active">View all the questions & answers</button><br><br>
+<div class="profile" *ngIf="!show">
+    <button (click)="change()">Show Profile</button>
+  </div>
+</div>
 
-<a routerLink="/subject" routerLinkActive="active">Select Subject</a>
- <li *ngFor="let item of items">
-    
-    <a>{{ item.body }}</a>
-
-    
-  </li>

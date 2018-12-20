@@ -2,14 +2,14 @@
   
     
     <div class="form-group">
-        <label for="sel1">Select list:</label>
+        <label for="sel1">Select exam:</label>
   <select class="form-control"  id="sel1" placeholder="Select Exam" [(ngModel)]="uid">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
+    <option value="1">CT1</option>
+    <option value="2">CT2</option>
+    <option value="3">CT3</option>
+    <option value="4">UNIVERSITY</option>
   </select>
- 
+ <br>
 
        <input type="submit" class="btn btn-info" (click)="submit()" value="Submit Button">
       
@@ -17,12 +17,18 @@
   
 
 
-<div class="=item">
-<li *ngFor="let item of items">
-    
-    <a>{{ item.name }}</a>
-
-    
-  </li>
+<div class="item">
+    <table style="width:100%">
+        <tr>
+          <th>Exam</th>
+          <th>Questions</th> 
+          <th>Answers</th>
+        </tr>
+          <tr *ngFor="let item of items; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{item.question}}</td>
+            <td>{{item.answer}}</td>
+          </tr>
+ </table>      
   </div>
 </div>

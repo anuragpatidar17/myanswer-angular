@@ -19,6 +19,12 @@ password:any;
     console.log(res)
     if(res.json().status==200){
     alert('successfully logged in')
+    let form={
+      name:res.json().name,
+      department:res.json().department,
+      email:res.json().email
+    }
+    localStorage.setItem('user', JSON.stringify(form))
     this.route.navigateByUrl("home");
     }
     else{
