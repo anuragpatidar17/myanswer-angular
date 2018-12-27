@@ -1,0 +1,81 @@
+
+#logo1{
+    height: 100px;
+  
+}
+
+#logo2{
+    height:85px;
+    
+  
+}
+#navbar{
+    height: 80px;
+    background: transparent;
+  
+}
+#comment{
+    border: 2px dotted #48D1CC;
+    margin-top: -10px;
+}
+#comment1{
+    width: 400px;
+    margin-top: 5px;
+    margin-left: -450px;
+    border: 2px dotted #48D1CC;
+}
+#comment2{
+    width: 400px;
+    margin-left: 450px;
+    border: 2px dotted #48D1CC;
+    margin-top: -87px;
+}
+
+
+
+.full{
+    background-image: url("whiteblue.jpg");
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    background-size: cover;
+   
+  height: 100%;
+}
+
+@media (max-width: 768px){
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+
+    }
+    .full{
+        background-size: cover;
+    }
+    #comment1{
+        width: 300px;
+        margin-left: 5px;
+    }
+    #comment2{
+        width: 300px;
+        margin-top: -30px;
+        margin-left: 5px;
+    }
+    #comment{
+        margin-left:-5px;
+    }
+}
+
+@media (max-width: 1350px) and (min-width: 768px){
+    #comment1{
+        width: 200px;
+        margin-left: 5px;
+    }
+    #comment2{
+        width: 200px;
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+   
+  }

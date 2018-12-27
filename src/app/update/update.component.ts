@@ -10,22 +10,23 @@ import { Http } from '.../../node_modules/@angular/http';
   styleUrls: ['./update.component.scss']
 })
 export class UpdateComponent implements OnInit {
-   items:any;
+   items=[];
   uid:any;
 
   constructor(private data: DataService,private route:Router) { }
 
   ngOnInit() {
-    this.data.update(this.uid).subscribe(
-      data => { this.items = data }
-    );
+    // this.data.update(this.uid).subscribe(
+    //   data => { this.items = data }
+    // );
   }
 
   submit(){
     this.data.update(this.uid).subscribe(res=>{
     console.log(res)
-    if(res.json().status==200){
+    if(res.json()[0].uid!=null){
     alert('Check question and answers')
+    this.items=res.json();
     }
     else{
       alert("Not uploaded!")

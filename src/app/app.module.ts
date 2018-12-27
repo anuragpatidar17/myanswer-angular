@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component, ViewEncapsulation } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,10 @@ import { FilterPipe } from './filter.pipe';
 import { UploadComponent } from './upload/upload.component';
 import { HomeComponent } from './home/home.component';
 import { UpdateComponent } from './update/update.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -25,13 +29,22 @@ import { UpdateComponent } from './update/update.component';
     FilterPipe,
     UploadComponent,
     HomeComponent,
-    UpdateComponent
+    UpdateComponent,
+    MainNavComponent
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-  FormsModule
+  FormsModule,
+  BrowserAnimationsModule,
+  LayoutModule,
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

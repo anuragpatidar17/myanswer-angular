@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subject.component.scss']
 })
 export class SubjectComponent implements OnInit {
-  dataset = ['MDB', 'Angular', 'Bootstrap', 'Framework', 'SPA', 'React', 'Vue'];
+  dataset = ['EDC -  15EE208', 'OOAD-15SE202', 'C++ - 15SE203', 'DS - 15CS202'];
 
   constructor() { }
 

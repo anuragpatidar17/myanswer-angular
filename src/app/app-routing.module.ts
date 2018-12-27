@@ -5,7 +5,6 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { MainComponent } from './main/main.component';
 import { UploadComponent } from './upload/upload.component';
-import { combineLatest } from '../../node_modules/rxjs';
 import { HomeComponent } from './home/home.component';
 import { UpdateComponent } from './update/update.component';
 

@@ -1,28 +1,63 @@
+<div class="full">
+<nav class="navbar navbar-default" id="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+       <img src="logo.png" id="logo1">
+      
+
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+          <img src="logo2.png" id="logo2">
+        </ul>
+
+      
+    </div>
+  </nav>
+
+
+
+
+
+
+
+    <div align="center" id="title">
+            <h2>Check Previous Upload</h2><br>
+
+
+
 <div class="container">
   
     
-    <div class="form-group">
-        <label for="sel1">Select list:</label>
-  <select class="form-control"  id="sel1" placeholder="Select Exam" [(ngModel)]="uid">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
- 
+  <div class="form-group">
+      <label for="sel1"><strong>Select exam:</strong></label>
+<strong><select class="form-control"  id="comment" placeholder="Select Exam" [(ngModel)]="uid">
+  <option value="1">CT1</option>
+  <option value="2">CT2</option>
+  <option value="3">CT3</option>
+  <option value="4">UNIVERSITY</option>
+</select>
+</strong>
+<br>
 
-       <input type="submit" class="btn btn-info" (click)="submit()" value="Submit Button">
-      
-    </div>
-  
-
-
-<div class="=item">
-<li *ngFor="let item of items">
+     <input type="submit" class="btn btn-info" (click)="submit()" value="Submit">
     
-    <a>{{ item.name }}</a>
+  </div><br>
 
-    
-  </li>
-  </div>
+
+
+<div class="item">
+  <table class="table table-striped" id="table" style="width:100%">
+      <tr>
+        <th>Exam</th>
+        <th>Questions</th> 
+        <th>Answers</th>
+      </tr>
+        <tr *ngFor="let item of items; let i=index">
+          <td>{{i+1}}</td>
+          <td>{{item.question}}</td>
+          <td>{{item.answer}}</td>
+        </tr>
+</table>      
+</div>
+</div>
 </div>

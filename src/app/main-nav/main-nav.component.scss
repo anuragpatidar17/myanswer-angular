@@ -1,0 +1,37 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#button1{
+  margin-top: 250px;
+  margin-left: -300px;
+}
+
+#button2{
+  margin-top: -36px;
+  margin-left: 300px;
+}
+
+@media (max-width: 768px){
+  #button1{
+    margin-left:5px;
+  }
+  #button2{
+   margin-top: 40px;
+   margin-left:5px;
+  }
+}
