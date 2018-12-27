@@ -1,8 +1,44 @@
 
-<div class="log" align="center">
-        <h1>Login Form</h1>
-<input type="email" class="input" placeholder="Your E-Mail Address" [(ngModel)]="email"/><br><br>
-<input type="password" class="input" placeholder="Your password Address" [(ngModel)]="password"/><br><br>
-<button type="button" class="button" (click)="submit()">Send</button>
-</div>
-  
+<div class="full">
+  <nav class="navbar navbar-default" id="navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+           <img src="logo.png" id="logo1">
+          
+    
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+              <img src="logo2.png" id="logo2">
+            </ul>
+    
+          
+        </div>
+      </nav>
+          <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+              <div class="card card-signin my-5">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Sign In</h5>
+                  
+                    <div class="form-label-group">
+                      <input type="email" id="inputEmail" class="form-control" placeholder="Your E-Mail " [(ngModel)]="email" required autofocus>
+                      <label for="inputEmail">Email address</label>
+                    </div>
+      
+                    <div class="form-label-group">
+                      <input type="password" id="inputPassword" class="form-control" placeholder="Your password " [(ngModel)]="password" required>
+                      <label for="inputPassword">Password</label>
+                    </div>
+      
+            
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="submit()" type="submit">Login</button>
+                    <hr class="my-4">
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+       
+  </div>
+

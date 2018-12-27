@@ -26,6 +26,7 @@ export class UploadComponent implements OnInit {
     console.log(res)
     if(res.json().status==200){
     alert('question and asnwer uploaded successfully')
+
     this.uid=null;
     this.question=null;
     this.answer=null;

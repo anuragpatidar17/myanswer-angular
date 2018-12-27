@@ -7,9 +7,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./subject.component.scss']
 })
 export class SubjectComponent implements OnInit {
+
   dataset;
 searchText;
   constructor(private data:DataService) { }
+
 
   ngOnInit() {
     this.data.getsubjects().subscribe(res=>{console.log(res.json())

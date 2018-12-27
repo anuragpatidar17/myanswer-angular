@@ -1,15 +1,70 @@
-<div *ngIf="show" class="detail">
-    <h5>User: </h5><span>{{name}}</span>
-    <h5>Department: </h5><span>{{department}}</span>
-    <h5>Email: </h5><span>{{email}}</span>
-    <button (click)="change()">Hide Profile</button>
+<div class="full">
+    <nav class="navbar navbar-default" id="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+       <img src="logo.png" id="logo1">
+      
+
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+          <img src="logo2.png" id="logo2">
+        </ul>
+
+      
     </div>
-<div align="center" style="margin-top:20%">
-<button routerLink="/subject" routerLinkActive="active">Select Subject / UPLOAD</button><br><br>
-<button routerLink="/update" routerLinkActive="active">View all the questions & answers</button><br><br>
-<div class="profile" *ngIf="!show">
-    <button (click)="change()">Show Profile</button>
-  </div><br>
-  <button routerLink="/main">Logout</button>
+  </nav>
+  <br>
+ 
+  <div class="container">
+  
+  <div *ngIf="show" class="detail">
+  <table class="table table-striped" id="table">
+     <tbody>
+        <label for="sel1"><strong>Name:</strong></label>
+          <tr>
+             
+    <td><strong>{{name}}</strong></td>
+  </tr></tbody>
+  <tbody>
+      <label for="sel1"><strong>department:</strong></label>
+      <tr>
+<td><strong>{{department}}</strong></td>
+</tr></tbody>
+<tbody>
+    <label for="sel1"><strong>Email:</strong></label>
+    <tr>
+<td><strong>{{email}}</strong></td>
+</tr></tbody></table>
+<button class="btn btn-lg btn-primary btn-block text-uppercase" id="button4" (click)="change()" type="submit">Hide Profile</button>
+
+</div>
+
+
+
+<div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+  
+<button class="btn btn-lg btn-primary btn-block text-uppercase"  id="button1" routerLink="/subject" routerLinkActive="active" type="submit">Upload
+    </button>
+
+
+<button class="btn btn-lg btn-primary btn-block text-uppercase" id="button2" routerLink="/update" routerLinkActive="active" type="submit">View All Questions</button>
+
+</div>
+<div class="col-sm-2" id="middle">
+    <div class="outer">
+        <div class="inner"></div>
+      </div></div>
+</div>
+<div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+    <div class="profile" *ngIf="!show">
+      
+<button class="btn btn-lg btn-primary btn-block text-uppercase" id="button3" (click)="change()" type="submit">Profile</button>
+
+</div>
+</div>
+</div>
+</div>
 </div>
 
