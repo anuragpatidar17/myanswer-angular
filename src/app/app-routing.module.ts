@@ -32,7 +32,7 @@ const routes: Routes = [
     component:MainComponent
   },
   {
-    path:'upload',
+    path:'upload/:id',
     component:UploadComponent
   },
   {
@@ -40,7 +40,7 @@ const routes: Routes = [
     component:HomeComponent
   },
   {
-    path:'update',
+    path:'update/:id',
     component:UpdateComponent
   }
 ];
