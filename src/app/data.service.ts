@@ -13,7 +13,7 @@ export class DataService {
       email:email,
       password:password
     }
-    return this.http.post('http://localhost:9000/admin_login',body)
+    return this.http.post('http://infigp.in:9000/admin_login',body)
   }
 
   signup(name,email,department,password){
@@ -24,23 +24,28 @@ export class DataService {
       password:password
 
     }
-    return this.http.post('http://localhost:9000/admin_reg',body)
+    return this.http.post('http://infigp.in:9000/admin_reg',body)
   }
 
-  upload(uid,question,answer){
+  upload(uid,question,answer,subject_code){
     let body={
       uid:uid,
       question:question,
-      answer:answer
+      answer:answer,
+      subject_code:subject_code
     }
-    return this.http.post('http://localhost:9000/update',body)
+    return this.http.post('http://infigp.in:9000/update',body)
   }
 
-  update(uid){
+  update(uid,subject_code){
     let body={
-      uid:uid
+      uid:uid,
+      subject_code:subject_code
     }
-    return this.http.post('http://localhost:9000/question',body)
+    return this.http.post('http://infigp.in:9000/question',body)
+  }
+  getsubjects(){
+return this.http.get('http://infigp.in:9000/subjects')
   }
 }
 
