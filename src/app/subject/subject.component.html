@@ -25,11 +25,13 @@
   <strong> <input type="search" [(ngModel)]="searchText" placeholder="Search text" id="search"></strong> 
   </div>
 
-  <table class="table table-striped" id="table" *ngFor="let data of dataset | filter: searchText">
+  <table class="table table-striped" id="table">
      
         <tbody>
-          <tr>
-    <td><strong>{{data}}</strong><button class="btn btn-primary btn-sm" id="button1" routerLink="/upload" routerLinkActive="active" type="submit">Upload</button> <button class="btn btn-primary btn-sm" id="button2" routerLink="/update" routerLinkActive="active" type="submit">Previous Upload</button> </td>
+          <tr  *ngFor="let data of dataset | filter: searchText">
+    <td><strong>{{data.subject_code}}&emsp;{{data.name}}</strong>
+      <td><button class="btn btn-primary btn-sm" id="button1" routerLink="/upload/{{data.subject_code}}" routerLinkActive="active" type="submit">Upload</button> </td>
+        <td><button class="btn btn-primary btn-sm" id="button2" routerLink="/update/{{data.subject_code}}" routerLinkActive="active" type="submit">Previous Upload</button> </td>
   </tr></tbody></table>
 </div>
 
