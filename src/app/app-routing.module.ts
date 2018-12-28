@@ -7,6 +7,9 @@ import { MainComponent } from './main/main.component';
 import { UploadComponent } from './upload/upload.component';
 import { HomeComponent } from './home/home.component';
 import { UpdateComponent } from './update/update.component';
+import { AuthGuard } from './auth.guard';
+import { ErrorComponent } from './error/error.component';
+import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
   {
@@ -18,7 +21,8 @@ const routes: Routes = [
   
   {
     path:'subject',
-    component:SubjectComponent
+    component:SubjectComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'login',
@@ -30,19 +34,36 @@ const routes: Routes = [
   },
   {
     path:'main',
-    component:MainComponent
+    component:MainComponent,
+   
   },
   {
     path:'upload/:id',
-    component:UploadComponent
+
+    component:UploadComponent,
+    canActivate:[AuthGuard]
+
   },
   {
     path:'home',
-    component:HomeComponent
+    component:HomeComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'update/:id',
-    component:UpdateComponent
+    component:UpdateComponent,
+    canActivate:[AuthGuard]
+  },
+  // {
+  //   path:'404',
+  //   component:ErrorComponent
+  // },
+  
+  // { path: '**', redirectTo: '404' },
+  {
+
+    path:'edit/:id1/:id2',
+    component:EditComponent
   }
 ];
 

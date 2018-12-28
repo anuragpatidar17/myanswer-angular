@@ -14,9 +14,13 @@ import { UploadComponent } from './upload/upload.component';
 import { HomeComponent } from './home/home.component';
 import { UpdateComponent } from './update/update.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainNavComponent } from './main-nav/main-nav.component';
+
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { AuthGuard } from '../app/auth.guard';
+import { AuthService } from './auth.service';
+import { ErrorComponent } from './error/error.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,8 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     UploadComponent,
     HomeComponent,
     UpdateComponent,
-    MainNavComponent
+    ErrorComponent,
+    EditComponent
    
   ],
   imports: [
@@ -45,7 +50,8 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
   MatIconModule,
   MatListModule
   ],
-  providers: [],
+  providers:
+  [AuthGuard,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

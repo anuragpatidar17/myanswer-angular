@@ -4,8 +4,7 @@ import { Http } from '../../node_modules/@angular/http';
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
-  
+export class DataService{
   constructor(private http:Http) { }
   
   login(email,password){
@@ -46,7 +45,30 @@ export class DataService {
   }
   getsubjects(){
 return this.http.get('http://infigp.in:9000/subjects')
+
   }
+
+  getedit(id,subject_code){
+let body={
+  id:id,
+  subject_code:subject_code
+}
+  
+  }
+
+  postedit(id,uid,question,answer,subject_code){
+    let body={
+      id:id,
+      uid:uid,
+      question:question,
+      answer:answer,
+      subject_code:subject_code
+    }
+    return this.http.post('http://infigp.in:9000/edit_subject',body)
+  }
+
+
+
 }
 
 
