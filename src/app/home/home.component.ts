@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ show:boolean=false;
 name:any;
 email:any;
 department:any;
-  constructor() { }
+  constructor(private auth:AuthService) { }
 
   ngOnInit() {
     
@@ -28,6 +29,11 @@ if (userData) {
   this.department=user.department
   this.email=user.email
 } 
+}
+logout(){
+  this.auth.isAuth=false;
+  localStorage.removeItem("user");
+
 }
 
 }

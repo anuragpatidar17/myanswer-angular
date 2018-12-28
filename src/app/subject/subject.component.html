@@ -6,6 +6,7 @@
        <img src="logo.png" id="logo1">
       
 
+
       </div>
       <ul class="nav navbar-nav navbar-right">
           <img src="logo2.png" id="logo2">
@@ -21,14 +22,17 @@
 <h2>Search your Subject</h2>
 </div>
   <div class="md-form">
-  <strong> <input type="search" [(ngModel)]="searchText" placeholder="Search text" id="search"></strong> 
+  <strong> <input type="search" [(ngModel)]="searchText" placeholder="Search subject" id="search"></strong> 
   </div>
 
-  <table class="table table-striped" id="table" *ngFor="let data of dataset | filter: searchText">
+  <table class="table table-striped" id="table">
      
         <tbody>
-          <tr>
-    <td><strong>{{data}}</strong><button class="btn btn-primary btn-sm" id="button1" routerLink="/upload" routerLinkActive="active" type="submit">Upload</button> <button class="btn btn-primary btn-sm" id="button2" routerLink="/update" routerLinkActive="active" type="submit">Previous Upload</button> </td>
+          <tr  *ngFor="let data of dataset | filter: searchText">
+    <td><strong>{{data.subject_code}}&emsp;{{data.name}}</strong>
+      <td><button class="btn btn-primary btn-sm" id="button1" routerLink="/upload/{{data.subject_code}}" routerLinkActive="active" type="submit">Upload</button> </td>
+        <td><button class="btn btn-primary btn-sm" id="button2" routerLink="/update/{{data.subject_code}}" routerLinkActive="active" type="submit">Previous Upload</button> </td>
+      
   </tr></tbody></table>
 </div>
 

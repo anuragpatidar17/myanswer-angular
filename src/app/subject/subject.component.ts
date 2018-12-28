@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-subject',
@@ -6,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subject.component.scss']
 })
 export class SubjectComponent implements OnInit {
-  dataset = ['EDC -  15EE208', 'OOAD-15SE202', 'C++ - 15SE203', 'DS - 15CS202'];
 
-  constructor() { }
+  dataset;
+searchText;
+  constructor(private data:DataService) { }
+
 
   ngOnInit() {
-  }
+    this.data.getsubjects().subscribe(res=>{console.log(res.json())
+      this.dataset=res.json()
+    })}
 
 }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { Router } from '../../../node_modules/@angular/router';
+import { Router, ActivatedRoute } from '../../../node_modules/@angular/router';
 import { Http } from '.../../node_modules/@angular/http';
 
 
@@ -12,8 +12,10 @@ import { Http } from '.../../node_modules/@angular/http';
 export class UpdateComponent implements OnInit {
    items=[];
   uid:any;
-
-  constructor(private data: DataService,private route:Router) { }
+subject_code:any;
+  constructor(private data: DataService,private active_route:ActivatedRoute) {
+    this.active_route.params.subscribe(params => this.subject_code=params.id)
+   }
 
   ngOnInit() {
     // this.data.update(this.uid).subscribe(
@@ -22,10 +24,10 @@ export class UpdateComponent implements OnInit {
   }
 
   submit(){
-    this.data.update(this.uid).subscribe(res=>{
+    this.data.update(this.uid,this.subject_code).subscribe(res=>{
     console.log(res)
     if(res.json()[0].uid!=null){
-    alert('Check question and answers')
+    //alert('Check question and answers')
     this.items=res.json();
     }
     else{

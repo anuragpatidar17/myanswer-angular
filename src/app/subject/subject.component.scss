@@ -12,15 +12,15 @@
 }
 
 #button1{
-    margin-left: 300px;
-    width: 200px;
+  //  margin-left: 300px;
+  //  width: 100px;
    border-radius: 25px;
    background-color: #48D1CC;
 
 }
 #button2{
-    margin-left: 30px;
-    width: 200px;
+ //   margin-left: 30px;
+  //  width: 200px;
     border-radius: 25px;
     background-color: #48D1CC;
 }
@@ -45,7 +45,7 @@
 .full{
     background-image: url("whiteblue.jpg");
     background-repeat: no-repeat;
-    overflow-y: hidden;
+  overflow-y: inherit;
     overflow-x: hidden;
     background-size: cover;
    
@@ -57,8 +57,8 @@
 #table{
     border-collapse: collapse;
     border-radius: 30px;
-    overflow: hidden;
-    margin-top: 20px;
+   // overflow: hidden;
+    margin-top: 35px;
     font-size: 18px;
     
 }
@@ -71,6 +71,10 @@
    #search{
        margin-left: 20px;
        width: 300px;
+
+   }
+   ::placeholder{
+       color: black;
    }
    #button1{
        margin-top: 70px;

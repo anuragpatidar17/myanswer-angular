@@ -1,3 +1,4 @@
+
 <div class="full">
 <nav class="navbar navbar-default" id="navbar">
     <div class="container-fluid">
@@ -10,9 +11,11 @@
           <img src="logo2.png" id="logo2">
         </ul>
 
+
       
     </div>
   </nav>
+
 
 
 
@@ -56,8 +59,11 @@
           <td>{{i+1}}</td>
           <td>{{item.question}}</td>
           <td>{{item.answer}}</td>
+          <td><button class="btn btn-primary btn-sm" id="button2" routerLink="/edit/{{subject_code}}/{{item.id}}"  routerLinkActive="active" type="submit">edit</button> 44</td>
         </tr>
+        
 </table>      
 </div>
 </div>
+
 </div>

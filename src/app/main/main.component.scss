@@ -48,7 +48,7 @@ body{
 
   #button2{
   
-    margin-top: 50px;
+    margin-top: -10px;
     background:transparent;
   
     width: 300px;
@@ -87,7 +87,7 @@ body{
   }
 
 
-
+  
 
 
 #logo1{
@@ -115,6 +115,7 @@ body{
     background-repeat: no-repeat;
     height: 100%;
     background-size: cover;
+    opacity: 0.95;
   
 }
 
@@ -145,15 +146,28 @@ body{
   } 
  
 
+  #orbutton{
+      margin-top: 1px;
+     margin-left: 130px;
+     font-weight: bolder;
+     color: #323232;
+     font-size: 30px;
+  }
+
+
+  
+
+
   
   @media (max-width: 768px){
     #logo1{
         margin-left: -20px;
     }
+ 
   
       #head{
           margin-top: 20px;
-          font-size: 60px;
+          font-size: 40px;
           margin-left: 10px;
       }
 
