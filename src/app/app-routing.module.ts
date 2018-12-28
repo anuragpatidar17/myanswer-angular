@@ -39,8 +39,10 @@ const routes: Routes = [
   },
   {
     path:'upload/:id',
+
     component:UploadComponent,
     canActivate:[AuthGuard]
+
   },
   {
     path:'home',
@@ -59,6 +61,7 @@ const routes: Routes = [
   
   // { path: '**', redirectTo: '404' },
   {
+
     path:'edit/:id1/:id2',
     component:EditComponent
   }

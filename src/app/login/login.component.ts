@@ -23,7 +23,9 @@ password:any;
     this.data.login(this.email,this.password).subscribe(res=>{
     console.log(res)
     if(res.json().status==200){
+
 this.auth.isAuth=true;
+
     let form={
       name:res.json().name,
       department:res.json().department,
