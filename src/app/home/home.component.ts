@@ -12,10 +12,11 @@ show:boolean=false;
 name:any;
 email:any;
 department:any;
+showSpinner: boolean = true;
   constructor(private auth:AuthService) { }
 
   ngOnInit() {
-    
+    this.showSpinner = false
   }
 change()
 {

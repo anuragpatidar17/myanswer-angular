@@ -12,19 +12,23 @@ export class SignupComponent implements OnInit {
   email:any;
   department:any;
   password:any;
-
+showSpinner:boolean=true;
   constructor(private data: DataService,private route:Router) { }
 
   ngOnInit() {
+  this.showSpinner=false;
   }
   submit(){
+    this.showSpinner=true;
     this.data.signup(this.name,this.email,this.department,this.password).subscribe(res=>{
     console.log(res)
     if(res.json().status==200){
+      this.showSpinner=false;
     alert('successfully signup')
     this.route.navigateByUrl("login");
     }
     else{
+      this.showSpinner=false;
       alert("Unsuccessfull signup")
     }
     })

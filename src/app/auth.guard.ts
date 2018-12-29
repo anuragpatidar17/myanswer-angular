@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
 else{
     // navigate to login page
     console.log("routing not works");
-    this.router.navigate(['main']);
+    this.router.navigate(['404']);
     // you can save redirect url so after authing we can move them back to the page they requested
     return false;
 }

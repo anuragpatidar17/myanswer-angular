@@ -22,6 +22,7 @@ import { AuthService } from './auth.service';
 import { ErrorComponent } from './error/error.component';
 import { EditComponent } from './edit/edit.component';
 import { CanDeactivateGuard } from './can-deactivate.guard';
+import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CanDeactivateGuard } from './can-deactivate.guard';
     HomeComponent,
     UpdateComponent,
     ErrorComponent,
-    EditComponent
+    EditComponent,
+    LoadingSpinnerComponent
    
   ],
   imports: [

@@ -55,19 +55,20 @@ const routes: Routes = [
     component:UpdateComponent,
     canActivate:[AuthGuard]
   },
-  // {
-  //   path:'404',
-  //   component:ErrorComponent
-  // },
-  
-  // { path: '**', redirectTo: '404' },
   {
 
     path:'edit/:id1/:id2',
     component:EditComponent,
     canActivate:[AuthGuard],
     canDeactivate:[CanDeactivateGuard]
-  }
+  },
+  {
+    path:'404',
+    component:ErrorComponent
+   },
+  
+   { path: '**', redirectTo: '404' },
+ 
 ];
 
 @NgModule({

@@ -6,13 +6,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./error.component.scss']
 })
 export class ErrorComponent implements OnInit {
-
+showSpinner:boolean=true;
   constructor(private router: Router) { }
 
   ngOnInit() {
-   // setTimeout(() => {
-   //   this.router.navigate(['main']);
-  //}, 3000); 
+    
+   setTimeout(() => {
+     this.showSpinner=false;
+     this.router.navigate(['main']);
+  }, 3000); 
 
   }
 
