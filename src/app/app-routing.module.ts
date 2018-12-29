@@ -10,6 +10,7 @@ import { UpdateComponent } from './update/update.component';
 import { AuthGuard } from './auth.guard';
 import { ErrorComponent } from './error/error.component';
 import { EditComponent } from './edit/edit.component';
+import { CanDeactivateGuard } from './can-deactivate.guard';
 
 const routes: Routes = [
   {
@@ -63,7 +64,9 @@ const routes: Routes = [
   {
 
     path:'edit/:id1/:id2',
-    component:EditComponent
+    component:EditComponent,
+    canActivate:[AuthGuard],
+    canDeactivate:[CanDeactivateGuard]
   }
 ];
 

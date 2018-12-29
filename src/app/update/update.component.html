@@ -54,12 +54,13 @@
         <th>Exam</th>
         <th>Questions</th> 
         <th>Answers</th>
+        <th>Edit</th>
       </tr>
         <tr *ngFor="let item of items; let i=index">
           <td>{{i+1}}</td>
           <td>{{item.question}}</td>
           <td>{{item.answer}}</td>
-          <td><button class="btn btn-primary btn-sm" id="button2" routerLink="/edit/{{subject_code}}/{{item.id}}"  routerLinkActive="active" type="submit">edit</button> 44</td>
+          <td><button class="btn btn-primary btn-sm" id="button2" routerLink="/edit/{{subject_code}}/{{item.id}}"  routerLinkActive="active" type="submit">edit</button></td>
         </tr>
         
 </table>      

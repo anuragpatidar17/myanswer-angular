@@ -21,6 +21,7 @@ import { AuthGuard } from '../app/auth.guard';
 import { AuthService } from './auth.service';
 import { ErrorComponent } from './error/error.component';
 import { EditComponent } from './edit/edit.component';
+import { CanDeactivateGuard } from './can-deactivate.guard';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { EditComponent } from './edit/edit.component';
   MatListModule
   ],
   providers:
-  [AuthGuard,AuthService],
+  [AuthGuard,AuthService,CanDeactivateGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

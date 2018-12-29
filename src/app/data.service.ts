@@ -49,12 +49,12 @@ return this.http.get('http://infigp.in:9000/subjects')
   }
 
   getedit(id,subject_code){
-let body={
-  id:id,
-  subject_code:subject_code
-}
-  
-  }
+    let body={
+      id:id,
+      subject_code:subject_code
+    }
+        return this.http.post('http://infigp.in:9000/previousedit',body)
+      }
 
   postedit(id,uid,question,answer,subject_code){
     let body={
