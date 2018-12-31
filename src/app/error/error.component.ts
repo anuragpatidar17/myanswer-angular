@@ -10,9 +10,9 @@ export class ErrorComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-   // setTimeout(() => {
-   //   this.router.navigate(['main']);
-  //}, 3000); 
+    setTimeout(() => {
+      this.router.navigate(['main']);
+  }, 3000); 
 
   }
 

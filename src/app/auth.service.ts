@@ -5,6 +5,7 @@ import { iif } from "../../node_modules/rxjs";
 export class AuthService {
     loggedIn = false;
 isAuth=false;
+isAuth1=false;
     isAuthenticated() {
      if(this.isAuth){
 console.log("isAuth is",this.isAuth)
@@ -17,4 +18,5 @@ console.log("isAuth is",this.isAuth)
          return false;
      } 
 }
+
 }

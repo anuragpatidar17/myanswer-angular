@@ -3,20 +3,23 @@ body{
 }
 
   #button1{
-     margin-top: 350px;
+     margin-top: -250px;
     
   
-     background:transparent;
   
-    width: 300px;
-    border-radius: 25px;
-    border: 2px solid #4c4c4c;
-    color:#323232;
-     padding-bottom:5px;
-  transition: all 0.5s;
-  cursor: pointer;
-  font-size:15px;
-  
+    margin-left: 700px;
+   
+   
+    background:transparent;
+   width: 300px;
+   border-radius: 25px;
+   border: 2px solid #323232;
+   box-shadow: 0 10px 30px 0px #b2b2b2;
+    padding-bottom:5px;
+
+ font-size:15px;
+ color: black;
+ 
   }
 
 
@@ -48,17 +51,20 @@ body{
 
   #button2{
   
-    margin-top: -10px;
+    margin-top: -15px;
+
+    margin-left: 700px;
+   
     background:transparent;
-  
-    width: 300px;
-    border-radius: 25px;
-    border: 2px solid #4c4c4c;
-    color:#323232;
-     padding-bottom:5px;
-  transition: all 0.5s;
-  cursor: pointer;
-  font-size:15px;
+   width: 300px;
+   border-radius: 25px;
+   border: 2px solid #323232;
+   box-shadow: 0 10px 30px 0px #b2b2b2;
+    padding-bottom:5px;
+color: black;
+ font-size:15px;
+
+ 
   }
 
 #button2 span {
@@ -111,7 +117,7 @@ body{
 }
 
 .full{
-    background-image: url("whiteblue.jpg");
+    background-image: url("new.jpg");
     background-repeat: no-repeat;
     height: 100%;
     background-size: cover;
@@ -120,35 +126,38 @@ body{
 }
 
 #head{
-    margin-top: 350px;
-    font-family: "Times New Roman", Times, serif;
+    margin-top: 200px;
+    margin-left: 80px;
+  
     font-weight: bold;
-     font-size: 80px;
-     color: #323232;
+     font-size: 70px;
+     columns: #323232;
+     opacity: 0.9;
+     font-family: "Times New Roman", Times, serif;
       
 }
 .outer {
     width: 2px;
     height: 100%;
-    margin: auto;
+   
     position: relative;
     overflow: hidden;
-    margin-top: 60px;
+    margin-top: 80px;
   }
   .inner {
     position: absolute;
     width:100%;
     height: 100%;
     background: grey;
-    top: 30%;
+    top: 20%;
     
     box-shadow: 0px 0px 30px 20px grey;
   } 
  
 
   #orbutton{
-      margin-top: 1px;
-     margin-left: 130px;
+      margin-top: -120px;
+     margin-left: 830px;
      font-weight: bolder;
      color: #323232;
      font-size: 30px;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Router, ActivatedRoute } from '../../../node_modules/@angular/router';
-
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-edit',
@@ -16,7 +16,7 @@ export class EditComponent implements OnInit {
 subject_code:any;
 dataset:any;
 
-  constructor(private data: DataService,private route:Router,private active_route:ActivatedRoute) {
+  constructor(private data: DataService,private route:Router,private active_route:ActivatedRoute,private auth:AuthService) {
     this.active_route.params.subscribe(params =>{
       this.subject_code=params.id1,
       this.id=params.id2
@@ -40,9 +40,11 @@ dataset:any;
     this.data.postedit(this.id,this.uid,this.question,this.answer,this.subject_code).subscribe(res=>{
     console.log(res)
     if(res.json().status==200){
+     
     alert('Data Updated!')
-
-    this.route.navigateByUrl("update/"+this.subject_code);
+     
+  
+   
     }
     else{
       alert("Unsuccessfull update")

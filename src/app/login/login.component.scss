@@ -15,7 +15,7 @@
 }
 
 .full{
-    background-image: url("whiteblue.jpg");
+    background-image: url("new.jpg");
     background-repeat: no-repeat;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -23,3 +23,42 @@
    
   height: 100%;
 }
+
+
+#head{
+    font-weight: bold;
+    color: #323232;
+    font-size: 40px;
+    opacity: 0.95;
+}
+
+
+#button1{
+    margin-top: 15px;
+    margin-left: 130px;
+   
+   
+    background-color: #323232;
+   width: 50%;
+   border-radius: 25px;
+   border: 2px solid #323232;
+   box-shadow: 0 10px 30px 0px #b2b2b2;
+    padding-bottom:5px;
+
+ font-size:15px;
+ 
+ }
+
+ #button1:hover{
+     background-color:black;
+      box-shadow: 0 10px 30px 0px #323232;
+      border: 2px solid black;
+ }
+
+
+ @media (max-width: 768px){
+    #button1{
+        margin-left: 90px;
+    }
+    
+   }

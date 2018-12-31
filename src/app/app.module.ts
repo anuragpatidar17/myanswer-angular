@@ -21,6 +21,8 @@ import { AuthGuard } from '../app/auth.guard';
 import { AuthService } from './auth.service';
 import { ErrorComponent } from './error/error.component';
 import { EditComponent } from './edit/edit.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarService } from './navbar.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { EditComponent } from './edit/edit.component';
     HomeComponent,
     UpdateComponent,
     ErrorComponent,
-    EditComponent
+    EditComponent,
+    NavbarComponent
    
   ],
   imports: [
@@ -51,7 +54,7 @@ import { EditComponent } from './edit/edit.component';
   MatListModule
   ],
   providers:
-  [AuthGuard,AuthService],
+  [AuthGuard,AuthService,NavbarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

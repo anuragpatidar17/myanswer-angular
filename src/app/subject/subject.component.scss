@@ -15,14 +15,23 @@
   //  margin-left: 300px;
   //  width: 100px;
    border-radius: 25px;
-   background-color: #48D1CC;
+   background-color: #323232;
 
 }
+#button1:hover{
+    background-color: #191919;
+
+}
+
 #button2{
  //   margin-left: 30px;
   //  width: 200px;
     border-radius: 25px;
-    background-color: #48D1CC;
+    background-color: #323232;
+}
+#button2:hover{
+    background-color: #191919;
+
 }
 
 #logo1{
@@ -43,7 +52,7 @@
 
 
 .full{
-    background-image: url("whiteblue.jpg");
+    background-image: url("new.jpg");
     background-repeat: no-repeat;
   overflow-y: inherit;
     overflow-x: hidden;
@@ -52,6 +61,9 @@
   height: 100%;
 }
 
+::placeholder{
+    color: #323232;
+}
 
 
 #table{
@@ -73,9 +85,7 @@
        width: 300px;
 
    }
-   ::placeholder{
-       color: black;
-   }
+ 
    #button1{
        margin-top: 70px;
        margin-left: -100px;

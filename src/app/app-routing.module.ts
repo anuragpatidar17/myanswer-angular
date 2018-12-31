@@ -8,8 +8,10 @@ import { UploadComponent } from './upload/upload.component';
 import { HomeComponent } from './home/home.component';
 import { UpdateComponent } from './update/update.component';
 import { AuthGuard } from './auth.guard';
+import {  CanActivateChild } from '@angular/router';
 import { ErrorComponent } from './error/error.component';
 import { EditComponent } from './edit/edit.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
   {
@@ -45,22 +47,22 @@ const routes: Routes = [
   {
     path:'home',
     component:HomeComponent,
-    canActivate:[AuthGuard]
+    canActivate:[AuthGuard],
+  
   },
   {
     path:'update/:id',
     component:UpdateComponent,
     canActivate:[AuthGuard]
   },
-  // {
-  //   path:'404',
-  //   component:ErrorComponent
-  // },
   
-  // { path: '**', redirectTo: '404' },
+  //{ path: '*page', 
+   //component:ErrorComponent
+   //},
   {
     path:'edit/:id1/:id2',
-    component:EditComponent
+    component:EditComponent,
+    canActivate:[AuthGuard]
   }
 ];
 

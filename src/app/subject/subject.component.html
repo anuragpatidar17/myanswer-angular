@@ -1,21 +1,21 @@
 <div class="full">
-
-<nav class="navbar navbar-default" id="navbar">
-    <div class="container-fluid">
-      <div class="navbar-header">
-       <img src="logo.png" id="logo1">
-      
-
-
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-          <img src="logo2.png" id="logo2">
-        </ul>
-
-      
-    </div>
+    <nav class="navbar navbar-default" id="navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+           <img src="../logo.png" id="logo1">
+          
     
-  </nav>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+              <img src="../logo2.png" id="logo2">
+            </ul>
+    
+          
+        </div>
+      </nav>
+
+
+<br>
   
   <div class="container">
 <div align="center" id="title">
@@ -32,6 +32,8 @@
     <td><strong>{{data.subject_code}}&emsp;{{data.name}}</strong>
       <td><button class="btn btn-primary btn-sm" id="button1" routerLink="/upload/{{data.subject_code}}" routerLinkActive="active" type="submit">Upload</button> </td>
         <td><button class="btn btn-primary btn-sm" id="button2" routerLink="/update/{{data.subject_code}}" routerLinkActive="active" type="submit">Previous Upload</button> </td>
+        
+        
       
   </tr></tbody></table>
 </div>

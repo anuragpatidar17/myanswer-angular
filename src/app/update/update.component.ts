@@ -26,6 +26,7 @@ subject_code:any;
   submit(){
     this.data.update(this.uid,this.subject_code).subscribe(res=>{
     console.log(res)
+    console.log(this.subject_code);
     if(res.json()[0].uid!=null){
     //alert('Check question and answers')
     this.items=res.json();
