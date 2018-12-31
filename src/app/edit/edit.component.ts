@@ -3,6 +3,7 @@ import { DataService } from '../data.service';
 import { Router, ActivatedRoute } from '../../../node_modules/@angular/router';
 import { CanDeactivateGuard } from '../can-deactivate.guard';
 import { Observable } from 'rxjs';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -18,7 +19,9 @@ export class EditComponent implements OnInit {
 subject_code:any;
 dataset:any;
 changesSaved = false;
-  constructor(private data: DataService,private route:Router,private active_route:ActivatedRoute) {
+items:Observable<any>;
+  constructor(private data: DataService,private route:Router,private active_route:ActivatedRoute,
+    private auth:AuthService) {
     this.active_route.params.subscribe(params =>{
       this.subject_code=params.id1,
       this.id=params.id2
@@ -30,26 +33,42 @@ changesSaved = false;
   ngOnInit() {
     this.data.getedit(this.id,this.subject_code).subscribe(res=>{console.log(res.json())
    //   this.dataset=res.json()
+   if(res.json().status==500)
+   {
+     this.auth.isAuth=false;
+     alert("Session Expired");
+
+   }
+   else{
+     
       this.uid=res.json()[0].uid;
       this.id=res.json()[0].id;
       this.question=res.json()[0].question;
       this.answer=res.json()[0].answer;
-    })}
+    }})}
 
     
 
   submit(){
     this.data.postedit(this.id,this.uid,this.question,this.answer,this.subject_code).subscribe(res=>{
     console.log(res)
+    if(res.json().status==500)
+    {
+      this.auth.isAuth=false;
+      alert("Session Expired");
+
+    }
+    else{
     if(res.json().status==200){
     alert('Data Updated!')
     this.changesSaved=true;
-    this.route.navigateByUrl("subject");
+   // this.ngOnInit();
+   // this.route.navigateByUrl("subject");
     }
     else{
       alert("Unsuccessfull update")
     }
-    })
+    }})
 }
 canDeactivate(){
   if(!this.changesSaved){

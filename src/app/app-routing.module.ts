@@ -48,7 +48,8 @@ const routes: Routes = [
   {
     path:'home',
     component:HomeComponent,
-    canActivate:[AuthGuard]
+    canActivate:[AuthGuard],
+    canDeactivate:[CanDeactivateGuard]
   },
   {
     path:'update/:id',

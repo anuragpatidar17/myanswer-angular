@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Http } from '../../node_modules/@angular/http';
+import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService{
-  
-  constructor(private http:Http) { }
+  token:any;
+  constructor(private http:Http,private auth:AuthService,private router:Router) { }
   
   login(email,password){
     let body={
@@ -32,7 +34,8 @@ export class DataService{
       uid:uid,
       question:question,
       answer:answer,
-      subject_code:subject_code
+      subject_code:subject_code,
+      token:this.token
     }
     return this.http.post('http://infigp.in:9000/update',body)
   }
@@ -40,19 +43,25 @@ export class DataService{
   update(uid,subject_code){
     let body={
       uid:uid,
-      subject_code:subject_code
+      subject_code:subject_code,
+      token:this.token
     }
     return this.http.post('http://infigp.in:9000/question',body)
   }
   getsubjects(){
-return this.http.get('http://infigp.in:9000/subjects')
+    let body={
+      token:this.token,
+    }
+return this.http.post('http://infigp.in:9000/subjects',body)
 
   }
 
   getedit(id,subject_code){
+    console.log("api hitted")
     let body={
       id:id,
-      subject_code:subject_code
+      subject_code:subject_code,
+      token:this.token
     }
         return this.http.post('http://infigp.in:9000/previousedit',body)
       }
@@ -63,13 +72,18 @@ return this.http.get('http://infigp.in:9000/subjects')
       uid:uid,
       question:question,
       answer:answer,
-      subject_code:subject_code
+      subject_code:subject_code,
+      token:this.token
     }
     return this.http.post('http://infigp.in:9000/edit_subject',body)
   }
 
 
-
+logout(){
+  this.auth.isAuth=false;
+  localStorage.removeItem("user");
+  this.router.navigate(['/']);
+}
 }
 
 

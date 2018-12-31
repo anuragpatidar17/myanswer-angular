@@ -28,6 +28,7 @@ showSpinner:boolean=true;
 
 this.auth.isAuth=true;
 this.showSpinner=false;
+this.data.token=res.json().token;
     let form={
       name:res.json().name,
       department:res.json().department,
@@ -42,4 +43,5 @@ this.showSpinner=false;
       alert("Unsuccessfull login")
     }
     })
-  }}
+  }
+}

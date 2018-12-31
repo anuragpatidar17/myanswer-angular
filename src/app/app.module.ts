@@ -23,6 +23,7 @@ import { ErrorComponent } from './error/error.component';
 import { EditComponent } from './edit/edit.component';
 import { CanDeactivateGuard } from './can-deactivate.guard';
 import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.co
   MatListModule
   ],
   providers:
-  [AuthGuard,AuthService,CanDeactivateGuard],
+  [AuthGuard,AuthService,CanDeactivateGuard,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

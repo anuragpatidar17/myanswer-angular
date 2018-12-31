@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -13,10 +15,12 @@ name:any;
 email:any;
 department:any;
 showSpinner: boolean = true;
-  constructor(private auth:AuthService) { }
+loggedin:boolean=false;
+  constructor(private auth:AuthService,private router:Router,private data:DataService) { }
 
   ngOnInit() {
-    this.showSpinner = false
+    this.showSpinner = false;
+this.loggedin=false;
   }
 change()
 {
@@ -32,9 +36,21 @@ if (userData) {
 } 
 }
 logout(){
-  this.auth.isAuth=false;
-  localStorage.removeItem("user");
+this.data.logout();
+//  this.loggedin=true;
 
+}
+canDeactivate(){
+  if(!this.loggedin){
+  return confirm ('Do you want to logout?');
+}
+else{
+  return true;
+}
+}
+subject(){
+this.loggedin=true;
+this.router.navigateByUrl('/subject');
 }
 
 }

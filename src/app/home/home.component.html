@@ -45,11 +45,11 @@
 <div class="row">
     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
   
-<button class="btn btn-lg btn-primary btn-block text-uppercase"  id="button1" routerLink="/subject" routerLinkActive="active" type="submit">Upload
+<button class="btn btn-lg btn-primary btn-block text-uppercase"  id="button1" (click)="subject()" type="submit">Upload
     </button>
 
 
-<button class="btn btn-lg btn-primary btn-block text-uppercase" id="button2" routerLink="/update" routerLinkActive="active" type="submit">View All Questions</button>
+<button class="btn btn-lg btn-primary btn-block text-uppercase" id="button2"  type="submit">View All Questions</button>
 
 </div>
 <div class="col-sm-2" id="middle">
@@ -66,7 +66,7 @@
 </div>
 <div class="profile">
       
-    <button class="btn btn-lg btn-primary btn-block text-uppercase" id="button5" (click)="logout()" routerLink="/">Logout</button>
+    <button class="btn btn-lg btn-primary btn-block text-uppercase" id="button5" (click)="logout()">Logout</button>
 
     
     </div>
