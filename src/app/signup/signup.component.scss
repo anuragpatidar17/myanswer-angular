@@ -16,11 +16,18 @@
   
 }
 
+#head{
+    font-size: 40px;
+    font-weight: bold;
+    color: #323232;
+
+}
+
 .full{
-    background-image: url("whiteblue.jpg");
+    background-image: url("new.jpg");
     background-repeat: no-repeat;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: hidden;
+  
     background-size: cover;
    
   
@@ -28,4 +35,24 @@
 
 #signupcard{
     margin-top: -20px;
+}
+
+
+#button1{
+    background: #323232;
+    border-radius: 25px;
+    width: 50%;
+    margin-left: 120px;
+}
+
+
+
+#button1:hover {
+  background: black;
+  }
+
+
+#sel1{
+    background: #e6e6fa;
+    border: 10px black;
 }

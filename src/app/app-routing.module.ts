@@ -64,6 +64,10 @@ const routes: Routes = [
     canDeactivate:[CanDeactivateGuard]
   },
   {
+     path:'edit',
+     component:EditComponent
+  },
+  {
     path:'404',
     component:ErrorComponent
    },

@@ -17,44 +17,67 @@
       <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
           <div class="row" >
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-              <div class="card card-signin my-5" >
+         
                 <div class="card-body">
-                  <h5 class="card-title text-center">Sign Up</h5>
+                  <h5 class="card-title text-center" id="head">Welcome</h5>
                  
-                    <div class="form-label-group">
-                            <label for="inputEmail">Name</label>
-                            <input type="text" id="inputName" class="form-control" placeholder="Your Full Name " [(ngModel)]="name" required > 
-                                
-                              </div>
-                    <div class="form-label-group">
+                    <div class="form-group">
+                            <label for="inputName">Name</label>
+                    <strong>       <input type="text" name="inputName" id="inputName" class="form-control" placeholder=" Full Name " [(ngModel)]="name" #inputName="ngModel" required autofocus minlength="5" > </strong>
+                            <div class="alert alert-danger" *ngIf="inputName.touched && !inputName.valid">
+                              <div *ngIf="inputName.errors.required">Full Name is required.</div>
+                              <div *ngIf="inputName.errors.minlength">Full Name should be minimum 5 characters.</div>
+                             
+                            </div>
+                            </div>
+                            
+
+
+                          
+
+
+                    <div class="form-group">
                             <label for="inputEmail">Email address</label>
-                      <input type="email" id="inputEmail" class="form-control" placeholder="Your E-Mail " [(ngModel)]="email" required autofocus>
-                      
-                    </div><br>
+                            <strong>   <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="E-Mail " [(ngModel)]="email" #inputEmail="ngModel" required autofocus minlength="20" maxlength="30"></strong>
+                            <div class="alert alert-danger" *ngIf="inputEmail.touched && !inputEmail.valid">
+                              <div *ngIf="inputEmail.errors.required">Email is required.</div>
+                              <div *ngIf="inputEmail.errors.minlength">Email should be minimum 6 characters.</div>
+                              <div *ngIf="inputEmail.errors.maxlength">Email should be maximum 30 characters.</div>
+                            </div>
+                            </div>
+                    <br>
                   
                    
-                            <label for="inputEmail">Select Branch:</label>  
-                            <select [(ngModel)]="department" class="form-control" id="sel1" required>
+                          <strong>  <label for="inputBranch">Select Branch:</label>  </strong>
+                             <select [(ngModel)]="department" #inputBranch="ngModel" class="form-control" name="inputBranch" id="sel1" required autofocus> 
                                     <option>Select your Branch</option>
                               <option>IT</option>
                               <option>CSE</option>
                               <option>SE</option>
                 
                             </select>
+                            <div class="alert alert-danger" *ngIf="inputBranch.touched && !inputBranch.valid">
+                              <div *ngIf="inputBranch.errors.required">Branch is required.</div>
+                              </div><br><br>
                             
                            
                      
                          
                        
       
-                    <div class="form-label-group">
-                            <label for="inputPassword">Password</label>
-                      <input type="password" id="inputPassword" class="form-control" placeholder="Your password " [(ngModel)]="password" required>
-                     
-                    </div>
+                              <div class="form-group">
+                                  <label for="inputPassword">Password</label>
+                                <strong> <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder=" password " [(ngModel)]="Password" #inputPassword="ngModel" required autofocus minlength="8" maxlength="30"></strong>
+                                
+                                <div class="alert alert-danger" *ngIf="inputPassword.touched && !inputPassword.valid">
+                                  <div *ngIf="inputPassword.errors.required">Password is required.</div>
+                                  <div *ngIf="inputPassword.errors.minlength">Password should be minimum 8 characters.</div>
+                                  <div *ngIf="inputPassword.errors.maxlength">Password should be maximum 30 characters.</div>
+                                </div>
+                                </div>
       
             
-                    <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="submit()" type="submit">Sign Up</button>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" id="button1" (click)="submit()" type="submit">Sign Up</button>
                     <hr class="my-4">
                   
                   
@@ -63,5 +86,5 @@
             </div>
           </div>
        
-        </div>
+        
 

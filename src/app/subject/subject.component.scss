@@ -43,7 +43,7 @@
 
 
 .full{
-    background-image: url("whiteblue.jpg");
+    background-image: url("new.jpg");
     background-repeat: no-repeat;
   overflow-y: inherit;
     overflow-x: hidden;
@@ -62,6 +62,9 @@
     font-size: 18px;
     
 }
+::placeholder{
+    color: #332233;
+}
 
 @media (max-width: 768px){
    
@@ -73,9 +76,7 @@
        width: 300px;
 
    }
-   ::placeholder{
-       color: black;
-   }
+  
    #button1{
        margin-top: 70px;
        margin-left: -100px;
