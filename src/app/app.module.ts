@@ -25,6 +25,7 @@ import { CanDeactivateGuard } from './can-deactivate.guard';
 import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ErrorComponent,
     EditComponent,
     LoadingSpinnerComponent,
-    NavbarComponent
+    NavbarComponent,
+    FeedbackComponent
    
   ],
   imports: [

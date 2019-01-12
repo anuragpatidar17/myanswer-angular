@@ -11,6 +11,7 @@ import { AuthGuard } from './auth.guard';
 import { ErrorComponent } from './error/error.component';
 import { EditComponent } from './edit/edit.component';
 import { CanDeactivateGuard } from './can-deactivate.guard';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 const routes: Routes = [
   {
@@ -62,6 +63,11 @@ const routes: Routes = [
     component:EditComponent,
     canActivate:[AuthGuard],
     canDeactivate:[CanDeactivateGuard]
+  },
+  {
+    path:'feedback/:id',
+    component:FeedbackComponent,
+    canActivate:[AuthGuard],
   },
   {
      path:'edit',

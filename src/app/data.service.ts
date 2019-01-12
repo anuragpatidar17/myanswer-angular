@@ -79,6 +79,33 @@ return this.http.post('http://infigp.in:9000/subjects',body)
   }
 
 
+  getedit1(subject_code){
+    console.log("api hitted")
+    let body={
+       
+      subject_code:subject_code,
+      token:this.token
+    }
+        return this.http.post('http://localhost:9000/previousedit1',body)
+      }
+
+
+
+  feed(subjectfeed,booksuggest,subject_code){
+    let body={
+     subjectfeed:subjectfeed,
+     booksuggest:booksuggest,
+      subject_code:subject_code,
+      token:this.token
+    }
+    return this.http.post('http://localhost:9000/subject_feedback',body)
+  }
+
+
+
+
+
+
 logout(){
   this.auth.isAuth=false;
   localStorage.removeItem("user");
