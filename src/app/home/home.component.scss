@@ -32,37 +32,33 @@
 
   margin-top: 300px;
   margin-left: -250px;
+  background: #323232;
+  border-radius: 25px;
   
 }
+
+
+#button1:hover {
+    background: black;
+    }
+  
 
 #button2{
   margin-top: -36px;
   margin-left: 350px;
-}
-#button5{
-    width: 100px;
-    margin-left: 270px;
-    margin-top: -36px;
-    font-size: 13px;
-    padding: 2px 2px 6px 2px;
-}
-#button4{
-    width: 300px;
-    margin-left: 300px;
+  background: #323232;
+  border-radius: 25px;
 }
 
-#button3{
-    width: 100px;
-   margin-left: -70px;
-    margin-top: -300px;
-    font-size: 13px;
-    padding: 2px 2px 6px 2px;
-    
-}
+#button2:hover {
+    background: black;
+    }
+  
+
 
 
 .full{
-    background-image: url("whiteblue.jpg");
+    background-image: url("new.jpg");
     background-repeat: no-repeat;
     overflow-y: hidden;
     overflow-x: hidden;

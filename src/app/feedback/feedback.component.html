@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+<div class="full">
+ 
+  
+  
+  
+  
+  <div class="container">
+          <div align="center" id="title">
+                  <h2>Subject Feedback</h2>
+    
+      
+      <div class="form-group">
+            
+    <br>
+        <label for="comment">Subject Feedback:</label>
+        <strong>  <textarea class="form-control"  rows="5" id="comment" placeholder="subject feedback" [(ngModel)]="subjectfeed" required></textarea><br></strong>
+  
+        <label for="comment">Book Suggestion:</label>
+        <strong><textarea class="form-control"  rows="5" id="comment" placeholder="book suggestion" [(ngModel)]="booksuggest" required></textarea><br></strong>
+  
+         <input type="submit" class="btn btn-info" (click)="submit()" value="Submit">
+        
+      </div>
+    
+  </div>
+  </div>

@@ -1,44 +1,10 @@
-
+<app-navbar></app-navbar>
 <div class="full">
-    <nav class="navbar navbar-default" id="navbar">
-    <div class="container-fluid">
-      <div class="navbar-header">
-       <img src="logo.png" id="logo1">
-      
 
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-          <img src="logo2.png" id="logo2">
-        </ul>
-
-      
-    </div>
-  </nav>
   <br>
   <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
   <div class="container">
-     
-  <div *ngIf="show" class="detail">
-  <table class="table table-striped" id="table">
-     <tbody>
-        <label for="sel1"><strong>Name:</strong></label>
-          <tr>
-             
-    <td><strong>{{name}}</strong></td>
-  </tr></tbody>
-  <tbody>
-      <label for="sel1"><strong>department:</strong></label>
-      <tr>
-<td><strong>{{department}}</strong></td>
-</tr></tbody>
-<tbody>
-    <label for="sel1"><strong>Email:</strong></label>
-    <tr>
-<td><strong>{{email}}</strong></td>
-</tr></tbody></table>
-<button class="btn btn-lg btn-primary btn-block text-uppercase" id="button4" (click)="change()" type="submit">Hide Profile</button>
-
-</div>
+ 
 
 
 
@@ -58,20 +24,7 @@
       </div></div>
 </div>
 <div>
-    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-    <div class="profile" *ngIf="!show">
-      
-<button class="btn btn-lg btn-primary btn-block text-uppercase" id="button3" (click)="change()" type="submit">Profile</button>
-
-</div>
-<div class="profile">
-      
-    <button class="btn btn-lg btn-primary btn-block text-uppercase" id="button5" (click)="logout()">Logout</button>
-
     
-    </div>
-
-</div>
 </div>
 </div>
 </div>

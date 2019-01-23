@@ -14,6 +14,7 @@
 #button1{
   //  margin-left: 300px;
   //  width: 100px;
+  
    border-radius: 25px;
    background-color: #48D1CC;
 
@@ -25,6 +26,12 @@
     background-color: #48D1CC;
 }
 
+#button3{
+    //   margin-left: 30px;
+     //  width: 200px;
+       border-radius: 25px;
+       background-color: #48D1CC;
+   }
 #logo1{
     height: 100px;
   
@@ -43,7 +50,7 @@
 
 
 .full{
-    background-image: url("whiteblue.jpg");
+    background-image: url("new.jpg");
     background-repeat: no-repeat;
   overflow-y: inherit;
     overflow-x: hidden;
@@ -62,6 +69,9 @@
     font-size: 18px;
     
 }
+::placeholder{
+    color: #332233;
+}
 
 @media (max-width: 768px){
    
@@ -73,15 +83,13 @@
        width: 300px;
 
    }
-   ::placeholder{
-       color: black;
-   }
+  
    #button1{
-       margin-top: 70px;
+       margin-top: 60px;
        margin-left: -100px;
    }
    #button2{
-    margin-top: 10px;
+    margin-top: 3px;
     margin-left:15px;
 }
 
@@ -96,11 +104,11 @@
     }
     #button1{
         margin-top: 10px;
-        margin-left: 30px;
+        margin-left: 80px;
         width: 200px;
     }
     #button2{
-     margin-top: -65px;
+     margin-top: -50px;
      margin-left:400px;
      width: 200px;
  }

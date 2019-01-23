@@ -1,4 +1,7 @@
 
+
+
+
 #logo1{
     height: 100px;
   
@@ -14,8 +17,16 @@
   background: transparent;
 }
 
+
+#head{
+    font-size: 50px;
+    font-weight: bold;
+    color: #323232;
+
+}
+
 .full{
-    background-image: url("whiteblue.jpg");
+    background-image: url("new.jpg");
     background-repeat: no-repeat;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -23,3 +34,15 @@
    
   height: 100%;
 }
+
+#button1{
+    background: #323232;
+    border-radius: 25px;
+    width: 50%;
+    margin-left: 120px;
+}
+
+#button1:hover {
+    background: black;
+    }
+  
