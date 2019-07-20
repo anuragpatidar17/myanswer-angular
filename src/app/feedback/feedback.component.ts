@@ -23,19 +23,20 @@ export class FeedbackComponent implements OnInit {
 
   ngOnInit() {
     this.showSpinner=false;
-    this.data.getedit1(this.subject_code).subscribe(res=>{console.log(res.json())
-      //   this.dataset=res.json()
-      if(res.json().status==500)
-      {
-        this.auth.isAuth=false;
-        alert("Session Expired");
+    // this.data.getedit1(this.subject_code).subscribe(res=>{console.log(res.json())
+    //   //   this.dataset=res.json()
+    //   if(res.json().status==500)
+    //   {
+    //     this.auth.isAuth=false;
+    //     alert("Session Expired");
    
+    //   }
+    //   else{
+   
+    //      this.subjectfeed=res.json()[0].subjectfeed;
+    //      this.booksuggest=res.json()[0].booksuggest;
+    //    }})
       }
-      else{
-   
-         this.subjectfeed=res.json()[0].subjectfeed;
-         this.booksuggest=res.json()[0].booksuggest;
-       }})}
   
  
   submit(){
@@ -62,4 +63,14 @@ export class FeedbackComponent implements OnInit {
       alert("Not uploaded feedback!")
     }
     }})
-  }}
+  }
+  setMyStyle() {
+    let styles = {
+      'background':'#eb01a5',
+      'background-image': 'url("https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"),linear-gradient(white, 	#109EDC)',
+      'background-repeat':'no-repeat',
+      'background-size':'cover'
+    };
+    return styles;
+  }
+}

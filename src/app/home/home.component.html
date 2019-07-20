@@ -1,30 +1,27 @@
 <app-navbar></app-navbar>
-<div class="full">
+  <div class="full"  [ngStyle]="setMyStyle()" >
 
   <br>
   <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
-  <div class="container">
+  <div class="container" align="center">
  
-
-
-
-<div class="row">
-    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
   
-<button class="btn btn-lg btn-primary btn-block text-uppercase"  id="button1" (click)="subject()" type="submit">Upload
-    </button>
+    <!-- <button class="btn btn-lg btn-primary btn-block text-uppercase"  id="button1" (click)="subject()" type="submit">Upload</button> -->
+<!-- Example split danger button -->
 
-
-<button class="btn btn-lg btn-primary btn-block text-uppercase" id="button2"  type="submit">View All Questions</button>
-
-</div>
-<div class="col-sm-2" id="middle">
-    <div class="outer">
-        <div class="inner"></div>
-      </div></div>
-</div>
-<div>
+<div style="margin-top: 20%">
+  <button type="button" class="btn btn-dark bg-dark">Select College</button>
+  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split bg-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" (click)="subject('abes')">ABES</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item"(click)="subject('srm')">SRM</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" (click)="subject('vit')">VIT</a>
     
+  </div>
 </div>
 </div>
 </div>

@@ -24,7 +24,9 @@ showSpinner:boolean=true;
   }
   
   submit(){
-    this.showSpinner=true;
+    
+    if(this.answer!=undefined||this.question!=undefined||this.uid!=undefined){
+      this.showSpinner=true;
     this.data.upload(this.uid,this.question,this.answer,this.subject_code).subscribe(res=>{
     console.log(res)
     if(res.json().status==500)
@@ -46,8 +48,22 @@ showSpinner:boolean=true;
       this.showSpinner=false;
       alert("Not uploaded!")
     }
+  
     }})
-  }}
+  }
+  else{
+    alert("Please fill data correctly");
+  }
+  }
+  setMyStyle() {
+    let styles = {
+      'background':'#eb01a5',
+      'background-image': 'linear-gradient(white, 	#109EDC)',
+      'background-repeat':'no-repeat'
+    };
+    return styles;
+}
+}
 
 
 

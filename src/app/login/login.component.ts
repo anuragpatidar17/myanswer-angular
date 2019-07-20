@@ -44,4 +44,12 @@ this.data.token=res.json().token;
     }
     })
   }
+  setMyStyle() {
+    let styles = {
+      'background':'#eb01a5',
+      'background-image': 'linear-gradient(white, 	#109EDC)',
+      'background-repeat':'no-repeat'
+    };
+    return styles;
+}
 }

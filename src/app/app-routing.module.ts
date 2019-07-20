@@ -22,9 +22,9 @@ const routes: Routes = [
   
   
   {
-    path:'subject',
+    path:'subject/:id',
     component:SubjectComponent,
-    canActivate:[AuthGuard]
+   canActivate:[AuthGuard]
   },
   {
     path:'login',
@@ -43,22 +43,21 @@ const routes: Routes = [
     path:'upload/:id',
 
     component:UploadComponent,
-    canActivate:[AuthGuard]
+   canActivate:[AuthGuard]
 
   },
   {
     path:'home',
     component:HomeComponent,
-    canActivate:[AuthGuard],
+   canActivate:[AuthGuard],
     canDeactivate:[CanDeactivateGuard]
   },
   {
     path:'update/:id',
     component:UpdateComponent,
-    canActivate:[AuthGuard]
+   canActivate:[AuthGuard]
   },
   {
-
     path:'edit/:id1/:id2',
     component:EditComponent,
     canActivate:[AuthGuard],
@@ -67,11 +66,7 @@ const routes: Routes = [
   {
     path:'feedback/:id',
     component:FeedbackComponent,
-    canActivate:[AuthGuard],
-  },
-  {
-     path:'edit',
-     component:EditComponent
+   canActivate:[AuthGuard],
   },
   {
     path:'404',

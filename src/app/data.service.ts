@@ -15,7 +15,7 @@ export class DataService{
       email:email,
       password:password
     }
-    return this.http.post('http://infigp.in:9000/admin_login',body)
+    return this.http.post('http://infigp.ml:7777/admin_login',body)
   }
 
   signup(name,email,department,password){
@@ -26,7 +26,7 @@ export class DataService{
       password:password
 
     }
-    return this.http.post('http://infigp.in:9000/admin_reg',body)
+    return this.http.post('http://infigp.ml:7777/admin_reg',body)
   }
 
   upload(uid,question,answer,subject_code){
@@ -37,7 +37,7 @@ export class DataService{
       subject_code:subject_code,
       token:this.token
     }
-    return this.http.post('http://infigp.in:9000/update',body)
+    return this.http.post('http://infigp.ml:7777/update',body)
   }
 
   update(uid,subject_code){
@@ -46,13 +46,14 @@ export class DataService{
       subject_code:subject_code,
       token:this.token
     }
-    return this.http.post('http://infigp.in:9000/question',body)
+    return this.http.post('http://infigp.ml:7777/question',body)
   }
-  getsubjects(){
+  getsubjects(college:any){
     let body={
       token:this.token,
+      college:college
     }
-return this.http.post('http://infigp.in:9000/subjects',body)
+return this.http.post('http://infigp.ml:7777/subjects',body)
 
   }
 
@@ -63,7 +64,7 @@ return this.http.post('http://infigp.in:9000/subjects',body)
       subject_code:subject_code,
       token:this.token
     }
-        return this.http.post('http://infigp.in:9000/previousedit',body)
+        return this.http.post('http://infigp.ml:7777/previousedit',body)
       }
 
   postedit(id,uid,question,answer,subject_code){
@@ -75,19 +76,19 @@ return this.http.post('http://infigp.in:9000/subjects',body)
       subject_code:subject_code,
       token:this.token
     }
-    return this.http.post('http://infigp.in:9000/edit_subject',body)
+    return this.http.post('http://infigp.ml:7777/edit_subject',body)
   }
 
 
-  getedit1(subject_code){
-    console.log("api hitted")
-    let body={
+  // getedit1(subject_code){
+  //   console.log("api hitted")
+  //   let body={
        
-      subject_code:subject_code,
-      token:this.token
-    }
-        return this.http.post('http://localhost:9000/previousedit1',body)
-      }
+  //     subject_code:subject_code,
+  //     token:this.token
+  //   }
+  //       return this.http.post('http://infigp.ml:7777/previousedit1',body)
+  //     }
 
 
 
@@ -98,7 +99,7 @@ return this.http.post('http://infigp.in:9000/subjects',body)
       subject_code:subject_code,
       token:this.token
     }
-    return this.http.post('http://localhost:9000/subject_feedback',body)
+    return this.http.post('http://infigp.ml:7777/subject_feedback',body)
   }
 
 

@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<div class="full">
+<div class="full"  [ngStyle]="setMyStyle()">
 
 
   
@@ -8,20 +8,25 @@
 <div align="center" id="title">
 <h2>Search your Subject</h2>
 </div>
-  <div class="md-form">
+  <div class="md-form" style="margin-left: -5%;">
   <strong> <input type="search" [(ngModel)]="searchText" placeholder="Type subject name or code..." id="search"></strong> 
   </div>
+  <div class="list-group"  *ngFor="let data of dataset | filter: searchText">
+    <ul>
+      <li  class="list-group-item list-group-item-action" style="border-radius:20px">
+     <div class="row">
+        <button  style="border-radius:20px;font-weight: bold" class="col-md-4" class="list-group-item list-group-item-action">{{data.subject_code}}&emsp;{{data.name}}</button>
+       <a  class="list-group-item-action">
+          <button type="button" style="border-radius:20px" class="col-md-4 btn-outline-success" routerLink="/upload/{{data.subject_code}}" routerLinkActive="active" type="submit">Upload</button>
+        <button type="button" style="border-radius:20px" class="col-md-4 btn-outline-dark"  routerLink="/update/{{data.subject_code}}" routerLinkActive="active" type="submit">Previous Upload</button>
+        <button type="button"  style="border-radius:20px" class="col-md-4 btn-outline-info" routerLink="/feedback/{{data.subject_code}}" routerLinkActive="active" type="submit">Subject Feedback</button>
+      
+       </a>
+     </div>
 
-  <table class="table table-striped" id="table">
-     
-        <tbody>
-          <tr  *ngFor="let data of dataset | filter: searchText">
-    <td><strong>{{data.subject_code}}&emsp;{{data.name}}</strong>
-      <td><button class="btn btn-primary btn-sm" id="button1" routerLink="/upload/{{data.subject_code}}" routerLinkActive="active" type="submit">Upload</button> </td>
-        <td><button class="btn btn-primary btn-sm" id="button2" routerLink="/update/{{data.subject_code}}" routerLinkActive="active" type="submit">Previous Upload</button> </td>
-        <td><button class="btn btn-primary btn-sm" id="button3" routerLink="/feedback/{{data.subject_code}}" routerLinkActive="active" type="submit">Subject Feedback</button> </td>
-
-  </tr></tbody></table>
+      </li>
+    </ul>
+    </div>
 </div>
 
 </div>

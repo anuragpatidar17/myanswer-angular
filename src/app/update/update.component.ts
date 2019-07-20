@@ -17,7 +17,7 @@ subject_code:any;
 showSpinner:boolean=true;
   constructor(private data: DataService,private active_route:ActivatedRoute,private auth:AuthService) {
     this.active_route.params.subscribe(params => this.subject_code=params.id)
-    console.log(this.subject_code);
+    console.log("subject code",this.subject_code);
    }
 
   ngOnInit() {
@@ -32,7 +32,7 @@ showSpinner:boolean=true;
     this.data.update(this.uid,this.subject_code).subscribe(res=>{
     console.log(res)
     if(res.json().status==500)
-    {
+    {this.showSpinner=false;
       this.auth.isAuth=false;
       alert("Session Expired");
 
@@ -49,4 +49,13 @@ showSpinner:boolean=true;
     }
     }}
     )
-  }}
+  }
+  setMyStyle() {
+    let styles = {
+      'background':'#eb01a5',
+      'background-image': 'linear-gradient(white, 	#109EDC)',
+      'background-repeat':'no-repeat'
+    };
+    return styles;
+}
+}

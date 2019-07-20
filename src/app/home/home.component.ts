@@ -48,9 +48,18 @@ else{
   return true;
 }
 }
-subject(){
+subject(college:any){
+  //console.log(college);
 this.loggedin=true;
-this.router.navigateByUrl('/subject');
+this.router.navigateByUrl('/subject/'+college);
 }
-
+setMyStyle() {
+  let styles = {
+    'background':'#eb01a5',
+    'background-image': 'url("https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"),linear-gradient(white, 	#109EDC)',
+    'background-repeat':'no-repeat',
+    'background-size':'cover'
+  };
+  return styles;
+}
 }

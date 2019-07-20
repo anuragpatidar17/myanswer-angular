@@ -32,4 +32,13 @@ showSpinner:boolean=true;
       alert("Unsuccessfull signup")
     }
     })
-}}
+}
+setMyStyle() {
+  let styles = {
+    'background':'#eb01a5',
+    'background-image': 'linear-gradient(white, 	#109EDC)',
+    'background-repeat':'no-repeat'
+  };
+  return styles;
+}
+}

@@ -17,24 +17,21 @@ department:any;
 showSpinner: boolean = true;
 loggedin:boolean=false;
 
-  constructor(private auth:AuthService,private router:Router,private data:DataService) { }
+  constructor(private auth:AuthService,private router:Router,private data:DataService) { 
+
+    var userData = localStorage.getItem("user");
+    if (userData) {
+        console.log(JSON.parse(userData));
+      var user=JSON.parse(userData)
+      this.name=user.name
+      this.department=user.department
+      this.email=user.email
+  }
+}
 
   ngOnInit() {
   
 
-}
-change()
-{
-  this.show=!this.show;
- // console.log(localStorage.getItem('user'));
-  var userData = localStorage.getItem("user");
-if (userData) {
-    console.log(JSON.parse(userData));
-  var user=JSON.parse(userData)
-  this.name=user.name
-  this.department=user.department
-  this.email=user.email
-} 
 }
 
 

@@ -11,7 +11,7 @@
 
 
 
-<div class="container">
+<div class="container"  [ngStyle]="setMyStyle()">
   
     
   <div class="form-group">
@@ -43,7 +43,10 @@
           <td>{{i+1}}</td>
           <td>{{item.question}}</td>
           <td>{{item.answer}}</td>
-          <td><button class="btn btn-primary btn-sm" id="button2" style="  background-color: #343a40;" routerLink="/edit/{{subject_code}}/{{item.id}}"  routerLinkActive="active" type="submit">edit</button></td>
+          <td>
+            <!-- <button class="btn"  routerLink="/edit/{{subject_code}}/{{item.id}}"  routerLinkActive="active" type="submit"></button> -->
+            <i style='font-size:24px' class='fas' routerLink="/edit/{{subject_code}}/{{item.uid}}"  routerLinkActive="active">&#xf044;</i>
+          </td>
         </tr>
         
 </table>      

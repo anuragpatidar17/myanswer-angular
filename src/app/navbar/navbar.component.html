@@ -5,7 +5,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto bg-dark">
       <li class="nav-item active">
         <a class="nav-link" routerLink="/home">Home</a>
       </li>
@@ -13,31 +13,26 @@
         <a class="nav-link" routerLink="/edit" routerLinkActive="active">Edit </a>
       </li> -->
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" (click)="change()" aria-expanded="false">
-          User Profile
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          User
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-           
-  <div *ngIf="show" class="detail">
-    <table class="table table-striped" id="table">
-       <tbody>
-          <label for="sel1"><strong>Name:</strong></label>
-            <tr>
-               
-      <td><strong>{{name}}</strong></td>
-    </tr></tbody>
-    <tbody>
-        <label for="sel1"><strong>department:</strong></label>
-        <tr>
-  <td><strong>{{department}}</strong></td>
-  </tr></tbody>
-  <tbody>
-      <label for="sel1"><strong>Email:</strong></label>
-      <tr>
-  <td><strong>{{email}}</strong></td>
-  </tr></tbody></table>
-  </div>
+          <a class="dropdown-item"><strong>Name: </strong>{{name}}</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item"><strong>Dept: </strong>{{department}}</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item"><strong>Email: </strong>{{email}}</a>
         </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          About
+        </a>
+        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item"><strong>Answerkey Web Portal</strong></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item"><strong>Made by our Intern Gaurav Prasad</strong></a>
+        </div> -->
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#"><strong>Logout</strong></a>
